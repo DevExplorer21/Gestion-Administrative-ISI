@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-title>Process</ion-title>
+  </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  <ion-item>
+  <h2> Welcome  {{ authUser?.name }} this is the list of your Process</h2>
+  </ion-item>
+
+  <ion-list *ngFor="let process of processList">
+
+    <ion-item-sliding>
+      <ion-item href detail>
+        <ion-thumbnail class="ion-margin-end">
+          <ion-img src="{{process.imageURL}}"></ion-img>
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap">{{process.name}} </ion-label>  
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="excute(process.id)" expand="full">Excute</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  <!--<ion-item-sliding>
+      <ion-item>
+        <ion-label>Process 2</ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="unread(item)">Excute</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-thumbnail class="ion-margin-end">
+    <ion_img src="{{imageURL}}"></ion_img>
+  </ion-thumbnail>
+  <ion-label class="ion-text-wrap">{{ProcessName}}</ion-label>
+    
+  -->
+  </ion-list>
+  <ion-button (click)="navigateWithObject()">Navigate with object</ion-button>
+  </ion-content>

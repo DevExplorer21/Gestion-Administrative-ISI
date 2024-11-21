@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Excute</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form *ngIf="Form.length!=0" [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+<ion-list *ngFor="let f of Form">
+    <ion-item lines="full">
+      <ion-label position="floating">{{f.name}}</ion-label>
+      <ion-input formControlName="{{f.name}}" name="{{f.name}}"  type="{{f.type}}"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="mango" expand="block">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <div class="center">
+    <ion-button (click)="goback()"> Go back</ion-button>
+   </div>
+</ion-content>

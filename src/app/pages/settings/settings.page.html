@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Log Out</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="center">
+    <ion-item>
+      <h2> GoodBye  {{ authUser?.name }}</h2>
+    </ion-item>
+
+  <ion-button color='primary' (click)="logoutAction()">Log Out</ion-button>
+  
+</div>
+</ion-content>

@@ -1,0 +1,67 @@
+<!-- <ion-header>
+<ion-toolbar color="primary">
+<ion-title>Connexion</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content padding='true'>
+  <div class="center">
+<img src="assets/images/logo.png" class="smallLogo"/>
+<h1>Connexion</h1>
+
+<form>
+<ion-list>
+<ion-item>
+<ion-label position="stacked">Username</ion-label>
+<ion-input autocomplete="off" type="text"></ion-input>
+</ion-item>
+
+<ion-item>
+<ion-label position="stacked">Password</ion-label>
+<ion-input autocomplete="off" type="password"></ion-input>
+</ion-item>
+
+<ion-item lines='none'>
+<a routerLink='/signup'>Create Account</a>
+</ion-item>
+
+</ion-list>
+<ion-button expand="block" share="round" color="primary">Connexion</ion-button>
+</form>
+</div>
+</ion-content>
+-->
+
+<ion-header>
+  <ion-toolbar color="primary">
+  <ion-title>Log In</ion-title>
+  </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding='true'>
+  <div class="center">
+  <img src="assets/images/logo.png" class="smallLogo"/>
+  <h1>Log In</h1>
+  </div>
+  <form>
+  <ion-list>
+  <ion-item>
+  <ion-label position="stacked">Username</ion-label>
+  <ion-input autocomplete="off" type="text" name="username" [(ngModel)]="postData.username"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+  <ion-label position="stacked">Password</ion-label>
+  <ion-input autocomplete="off" type="password" name="password" [(ngModel)]="postData.password"></ion-input>
+  </ion-item>
+  
+  <!--<ion-item lines='none'>
+  <a routerLink='/signup'>Create Account</a>
+  </ion-item>
+  -->
+  </ion-list>
+
+  <ion-button expand="block" share="round" color="mango" (click)="loginAction()">Log In</ion-button>
+  </form>
+  
+  </ion-content>
